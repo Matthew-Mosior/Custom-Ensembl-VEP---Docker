@@ -26,3 +26,6 @@ RUN mkdir -p /opt/vep_cache
 RUN wget https://github.com/Ensembl/ensembl-vep/archive/release/93.zip
 RUN unzip 93.zip
 WORKDIR ensembl-vep-release-93/
+
+#Install ensembl-vep.
+RUN yes n | perl INSTALL.pl
