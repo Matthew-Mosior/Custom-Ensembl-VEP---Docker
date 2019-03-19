@@ -29,3 +29,12 @@ WORKDIR ensembl-vep-release-93/
 
 #Install ensembl-vep.
 RUN yes n | perl INSTALL.pl
+
+#Set alias for vep.
+RUN echo "alias vep=./vep" > ~/.bashrc
+
+#Source the bashrc file.
+RUN /bin/bash -c "source ~/.bashrc"
+
+#Set working directory.
+WORKDIR ~/
